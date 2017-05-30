@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>vue-simple-website-prod</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-loading">
+  <!-- app -->
+  <div id="app">
+
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
+
+      <!-- Header -->
+      <header id="header">
+        <vc-header></vc-header>
+      </header>
+
+      <!-- Nav -->
+      <nav id="nav">
+        <vc-which-page-home></vc-which-page-home>
+        <vc-social-icons></vc-social-icons>
+      </nav>
+      <!-- Main -->
+      <div id="main">
+
+        <!-- Post -->
+        <header class="major">
+          <h1>  {{articles[0].name}}</h1>
+        </header>
+        <!-- Lists -->
+        <template v-for="i in articles[0].imgs">
+                <img class="image fit" v-bind:src="i"/></a>
+          </template>
+      </div>
+
+
+    </div>
+    <!-- Footer -->
+    <footer id="footer">
+    </footer>
+
+    <!-- Copyright -->
+    <div id="copyright">
+      <ul>
+        <li>&copy;{{name_motto}}</li>
+      </ul>
+    </div>
+
+  </div>
+
+  </div>
+  <!-- /app -->
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/vue.js"></script>
+  <script src="assets/js/vue_app.js"></script>
+
+</body>
+
+</html>

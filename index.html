@@ -1,0 +1,90 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <title>vue-simple-website</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+</head>
+
+<body class="is-loading">
+  <!-- app -->
+  <div id="app">
+    <!-- Wrapper -->
+    <div id="wrapper" class="fade-in">
+
+      <!-- Header -->
+      <header id="header">
+        <vc-header></vc-header>
+      </header>
+
+      <!-- Nav -->
+      <nav id="nav">
+        <vc-which-page-home></vc-which-page-home>
+        <vc-social-icons></vc-social-icons>
+      </nav>
+      <!-- Main -->
+      <div id="main">
+        <!-- Featured Post -->
+        <!-- Posts -->
+        <section class="posts">
+
+          <!-- each template is an article -->
+          <template v-for="article in articles">
+              <article>
+                <a v-bind:href="article.link">
+                <img class="image fit" v-bind:src="article.img"/></a>
+                <h2><a v-bind:href="article.link">{{article.name}}</a></h2>
+                <ul class="actions">
+                  <li><a v-bind:href="article.link" class="button">
+                    <div  class="icon fa-plus-square-o">
+                    See details</div></a></li>
+                </ul>
+              </article>
+          </template>
+          <article>
+            <h2>Whaat?</h2><br />
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Duis at quam et erat efficitur congue.
+Maecenas facilisis justo nec lacinia porttitor.
+Aliquam finibus turpis in imperdiet ultricies.
+In eu massa nec leo pellentesque loborti
+              <br /><br /></p>
+
+          </article>
+
+        </section>
+
+        <!-- Footer -->
+        <footer>
+        </footer>
+
+      </div>
+
+
+      <!-- Copyright -->
+      <vc-copyright></vc-copyright>
+
+    </div>
+    <!-- /Wrapper -->
+
+
+  </div>
+  <!-- /app -->
+  <!-- Scripts -->
+  <script src="assets/js/jquery.min.js"></script>
+  <script src="assets/js/jquery.scrollex.min.js"></script>
+  <script src="assets/js/jquery.scrolly.min.js"></script>
+  <script src="assets/js/skel.min.js"></script>
+  <script src="assets/js/util.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/vue.js"></script>
+  <script src="assets/js/vue_app.js"></script>
+  <script>
+  </script>
+
+</body>
+
+</html>
